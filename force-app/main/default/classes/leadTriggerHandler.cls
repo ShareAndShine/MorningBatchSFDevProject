@@ -3,8 +3,8 @@ public with sharing class leadTriggerHandler {
 
     }
 
-    public static CheckLeadDuplicates(List<lead allleads)
+    public static integer CheckLeadDuplicates(List<lead allleads)
     {
-        
+        return 0;
     } 
 }
