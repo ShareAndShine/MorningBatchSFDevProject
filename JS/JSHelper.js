@@ -63,9 +63,155 @@ console.log("The topic " + topicName + " has been categorized under " +
 console.log(`The topic ${topicName} has been categorized under ${topicCategory} !!!`);
 
 
+const value1 = 6;
+
+const value2 = "6"; // SET ON STONE
+//value2 = "8"; // Error out
+console.log(typeof value2);
+
+// comparison 
+const x = "6"; 
+const y  = 6; 
+console.log("Are we equal x==y::" + x==y); // general 
+console.log("Are we equal x===y::" + x===y); // strict comparison
+
+
+// Objects
+const SFTopics0 = {
+    topicName : "Java script fundamentals",
+    topicCategory : "Javascript"
+};
+console.log("Who am I - SFTopics?? : " + typeof SFTopics0); // Object
+console.log("SFTopics?? : " + SFTopics0); // [object object]
+console.log("SFTopics - with values : " + JSON.stringify(SFTopics0));
+
+// Say, we want to hold multiple topics
+// Approach 1 - Not scable when we want to hold lot of topics
+
+const SFTopics1 = {
+    topicName : "APEX fundamentals",
+    topicCategory : "APEX Programming"
+};
+
+const SFTopics2 = {
+    topicName : "Triggers",
+    topicCategory : "APEX Programming"
+};
 
 
 
+// Approach 2: Use class and objects together
+
+class SFTopics{
+
+    
+    constructor(TopicName, TopicCategory) //Main entry
+    {
+        this._topicName = TopicName,
+        this._topicCat = TopicCategory
+    }
+    
+    /* 
+    // With no constructor model
+    _topicName = "";
+    _topicCat ="";
+
+    getInput(TopicName, TopicCategory)
+    {
+        this._topicName = TopicName;
+        this._topicCat = TopicCategory;
+    }*/
+   
+    getMeTypeofClass()
+    {
+        console.log("Who am I - SFTopics ?:" + typeof SFTopics);
+    }
+
+    getTopicDetails()
+    {
+        // Pring name and cat
+        console.log(`The topic ${this._topicName} has been categorized 
+                        under ${this._topicCat} !!!`);
+
+    }
+
+}
+
+// Set a new topic by creating an object
+let SFTop1 = new SFTopics("Java script fundamentals", "Javascript");
+SFTop1.getTopicDetails();
+
+let SFTop2 = new SFTopics("APEX fundamentals", "APEX Programming");
+SFTop2.getTopicDetails();
+
+let SFTop3 = new SFTopics("Triggers", "APEX Programming");
+SFTop3.getTopicDetails();
+
+let SFTop4 = new SFTopics("Triggers");
+SFTop4.getTopicDetails();
+
+
+/* With no constructor
+let SFTop5 = new SFTopics();
+SFTop5.getInput("Java script fundamentals", "Javascript");
+SFTop5.getTopicDetails();
+*/
+   
+
+// functions - Method 1
+addTopics("Process Builder", "SF Admin");
+function addTopics(TopicName, TopicCategory)
+{
+    console.log(`The topic ${TopicName} has been categorized 
+                        under ${TopicCategory} !!!`);
+}
+
+
+
+// functions - Method 2
+const addTopics_2 = function(TopicName, TopicCategory)
+{
+    console.log(`The topic ${TopicName} has been categorized 
+    under ${TopicCategory} !!!`);
+};
+addTopics_2("Flow", "SF Admin");
+
+//function - Method 3
+
+const addTopics_3 = (TopicName, TopicCategory) =>
+{
+    console.log(`The topic ${TopicName} has been categorized 
+    under ${TopicCategory} !!!`);
+};
+addTopics_3("Work Flow", "SF Admin");
+
+
+// Set 
+let SFTopic_s = new Set();
+SFTopic_s.add("JS Basics");
+SFTopic_s.add("JS Basics");
+SFTopic_s.add("LWC");
+SFTopic_s.add("Trigger");
+
+console.log("Hi there !!! I am learning set collections in JS - Print SFTopic_s::" 
+                + SFTopic_s.keys());
+
+console.log("Hi there !!! I am learning set collections in JS - Print SFTopic_s::" 
++ SFTopic_s.has("LWC"));
+
+
+// Map
+let SFTopic_p = new Map();
+SFTopic_s.add("Javascript", "JS Basics");
+SFTopic_s.add("Javascript - Advacned", "ES6");
+SFTopic_s.add("LWC", "Comp bundles");
+
+
+// TODO
+// Array
+// For loop and For each
+// ES6 destructing syntax
+// JS modules
 
 
 
