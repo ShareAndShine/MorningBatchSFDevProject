@@ -156,15 +156,15 @@ let SFTop5 = new SFTopics();
 SFTop5.getInput("Java script fundamentals", "Javascript");
 SFTop5.getTopicDetails();
 */
-   
 
 // functions - Method 1
-addTopics("Process Builder", "SF Admin");
 function addTopics(TopicName, TopicCategory)
 {
     console.log(`The topic ${TopicName} has been categorized 
                         under ${TopicCategory} !!!`);
 }
+addTopics("Process Builder", "SF Admin");
+
 
 
 
@@ -183,7 +183,9 @@ const addTopics_3 = (TopicName, TopicCategory) =>
     console.log(`The topic ${TopicName} has been categorized 
     under ${TopicCategory} !!!`);
 };
-addTopics_3("Work Flow", "SF Admin");
+addTopics_3("Work Flow", "SF Admin");   
+
+
 
 
 // Set 
@@ -212,6 +214,153 @@ SFTopic_s.add("LWC", "Comp bundles");
 // For loop and For each
 // ES6 destructing syntax
 // JS modules
+
+
+// Array
+const numbers = [1,2,3,4,5];
+const veggie = ["Onion", "Tomatao", "Carrot"]
+
+// when u deal with arrays u will use square bracket []
+// when u deal with objects u will use curly braces {}
+
+// array holding multiple objects
+const SFTopicsArr = [
+
+    { topicName : "Java script fundamentals",topicCategory : "Javascript"}, // object 1
+    { topicName : "JS Module",topicCategory : "Javascript"},
+    { topicName : "Triggers",topicCategory : "APEX"},
+];
+
+console.log("showing numbers array ::" + numbers); // number array
+console.log("showing veggie array ::" + veggie); // number array
+console.log("showing carrot in the array ::" + veggie[2]); // number array
+
+console.log("showing objects array ::" + SFTopicsArr); // objects array
+console.log("showing objects array ::" + SFTopicsArr[0]); // objects array
+console.log("showing objects array ::" + SFTopicsArr[0].topicName); // objects array 1st element 
+console.log("showing objects array ::" + SFTopicsArr[1].topicName); // objects array 2nd element
+
+// Method -1 
+// For loop - loop thru object array and show all object values
+for(let i=0 ; i < SFTopicsArr.length ; i++)
+{
+
+    console.log(`The topic ${SFTopicsArr[i].topicName} has been categorized 
+    under ${SFTopicsArr[i].topicCategory} !!!`);
+
+}
+
+// Method 2
+// For each
+
+SFTopicsArr.forEach(printarrayitems); // array.foreach(function as argument)
+
+function printarrayitems(item) // actual function 
+{
+    console.log(`The topic ${item.topicName} has been categorized 
+    under ${item.topicCategory} !!!`);
+}
+
+veggie.forEach(printveggiearrayitems); // array.foreach(function as argument)
+
+function printveggiearrayitems(item) // actual function 
+{
+    console.log(`Veggie array items : ${item} !!!`);
+}
+
+
+
+numbers.forEach(printNumberarrayitems); // array.foreach(function as argument)
+
+function printNumberarrayitems(item) // actual function 
+{
+    console.log(`Number array items : ${item} !!!`);
+}
+
+
+// JS modules
+
+// JArgons : Import / Export etc
+
+
+function repeat_oldformat(input)
+{
+    console.log(`${input} ${input}`);
+}
+
+// Using JS modules u can make a call to functions defined outside the JSfile
+
+const evennumberarr = [2,4,6,8,10];
+
+evennumberarr.forEach(FindSquareRoot); // array.foreach(function as argument)
+function FindSquareRoot(item) // actual function 
+{
+      console.log(`Square root of ${item} is  ${item * item}  !!!`);
+}
+
+// Approach 2 - using arrow function
+/*evennumberarr.forEach((item) => 
+    {
+        console.log(`Square root of ${item} is  ${item * item}  !!!`);
+
+    }
+);
+*/
+
+
+// Array destructing
+
+// combine 2 arrays
+
+const evennumarr = [2,4,6,8,10];
+const oddnumarr = [1,3,5,7,9];
+
+
+
+// Method 1: Combining 2 array elements
+
+console.log(evennumarr.concat(oddnumarr));
+console.log("evennumarr::" + evennumarr);
+
+// Method 2: Create a new array and merge arrays 
+const numberarray = [].concat(oddnumarr, evennumarr);
+console.log("numberarray::" + numberarray);
+
+// Method 3: Es6 spread syntax
+console.log("Es6 syntax:" + [...evennumarr, ...oddnumarr]);
+
+
+// Points to remember
+/*
+1. All modern browsers support ES6 syntax except Internet explorer
+2. If you know the data type u are deal with to merge then use cconcat else 
+   go with ES6 
+*/
+
+const greetings = ["Hi", "I", "Am"]
+const name = 'Javascript';
+
+console.log("using concat::" + greetings.concat(name));
+
+console.log("using ES6 spread syntax::" + [...greetings, ...name]);
+
+
+// TODO: Hands-on - Apply ES6 syntax aganist objects
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
