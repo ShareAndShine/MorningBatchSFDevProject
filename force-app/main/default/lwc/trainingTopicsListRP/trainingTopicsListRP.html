@@ -1,0 +1,47 @@
+<template>
+
+    <div if:true={recordExists}>
+        <lightning-card  title="Listing all SF training Topics - Using Wire data service (OP in method)" 
+         icon-name="standard:asset_action">
+         <div class="c-container">
+            <lightning-layout multiple-rows>
+                <template for:each={SFAllTrainingTopics} for:item="topic" >
+                    <lightning-layout-item  size="4" padding="around-small" key={topic.ID} title={topic.Topic_Category__c}>
+                        <div class="custom-box slds-text-align_center" title={topic.Topic_Category__c}>
+                            <lightning-icon icon-name="standard:code_playground"></lightning-icon>
+                            <p class="slds-var-m-around_small slds-text-title_bold ">Name: {topic.Topic_Name__c}</p>
+                        </div>
+                    </lightning-layout-item>
+            </template>
+
+            </lightning-layout>
+         </div>    
+                
+              
+        </lightning-card>
+    </div>
+
+   <!--  <div if:true={recordExists}>
+        <lightning-card  title="Listing all SF training Topics - Using Wire data service (OP in method)" 
+         icon-name="standard:asset_action">
+           
+                <template for:each={SFAllTrainingTopics} for:item="topic" >
+                    <lightning-card title={topic.Topic_Category__c} key={topic.ID} icon-name="standard:contact"
+                        class="slds-var-m-around_small slds-var-p-around_small slds-text-color_weak" >
+                        <p class="slds-var-m-around_medium">Name: {topic.Topic_Name__c}</p>
+                    </lightning-card>
+                    
+                   
+                </template>
+                
+              
+        </lightning-card>
+    </div>
+
+ -->
+
+    <div if:false={recordExists}>
+        <p>No records found !!!! </p>
+    </div>
+
+</template>

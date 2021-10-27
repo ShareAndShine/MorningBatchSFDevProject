@@ -1,0 +1,12 @@
+.c-container {
+    border: 1px solid #d8dde6;
+    margin: 10px 0 20px 0;
+}
+
+.custom-box {
+    text-align: center;
+    background-color: #2d66bd;
+    padding: 1rem;
+    border: 1px solid #02102b;
+    
+}
