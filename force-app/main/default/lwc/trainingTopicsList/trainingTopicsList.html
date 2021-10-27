@@ -1,16 +1,43 @@
 <template>
     
     <!-- Show user a friendly message if there is no data else show the list of topics-->
+    <!-- Hard code array of objects -->
     <div if:true={recordExists}>
-        <lightning-card  title="Listing all SF training Topics" icon-name="standard:asset_action">
+        <lightning-card  title="Listing all SF training Topics - Using hardcoded array of objects" icon-name="standard:asset_action">
             <ul class="slds-var-m-around_medium">
                 <template for:each={SFTopicsArr} for:item="topic">
-                    <li key={topic.topicName} class="slds-var-m-around_medium">Topic Name:: {topic.topicName} - Topic Category:: {topic.topicCategory}</li>
+                    <li key={topic.topicname} class="slds-var-m-around_medium">Topic Name:: {topic.topicname} - Topic Category:: {topic.topicCategory}</li>
                 </template>
                 
               </ul>
         </lightning-card>
     </div>
+    <!-- Method 1: Using Wire service-->
+    <div if:true={recordExists}>
+        <lightning-card  title="Listing all SF training Topics - Using Wire data service (OP in property)" icon-name="standard:asset_action">
+            <ul class="slds-var-m-around_medium">
+                <template for:each={SFTopicslist.data} for:item="topic">
+                    <li key={topic.ID} class="slds-var-m-around_medium">Topic Name:: {topic.Topic_Name__c} - Topic Category:: {topic.Topic_Category__c}</li>
+                </template>
+                
+              </ul>
+        </lightning-card>
+    </div>
+
+
+    <!-- Method 2: Using Wire service and store OP in a method-->
+    <div if:true={recordExists}>
+        <lightning-card  title="Listing all SF training Topics - Using Wire data service (OP in method)" icon-name="standard:asset_action">
+            <ul class="slds-var-m-around_medium">
+                <template for:each={SFAllTrainingTopics} for:item="topic">
+                    <li key={topic.ID} class="slds-var-m-around_medium">Topic Name:: {topic.Topic_Name__c} - Topic Category:: {topic.Topic_Category__c}</li>
+                </template>
+                
+              </ul>
+        </lightning-card>
+    </div>
+
+
     <div if:false={recordExists}>
         <p>No records found !!!! </p>
     </div>
