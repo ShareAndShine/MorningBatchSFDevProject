@@ -18,6 +18,11 @@ export default class TrainingTopicsList extends LightningElement {
     recordExists = this.SFTopicsArr.length > 0 ? true: false; 
 
     SFAllTrainingTopics;
+
+    SFAllTrainingTopics_method3;
+
+    _error;
+    _topicCategoryInput;
     
     /*
         1. Make a call to DB and retrieve all SF topics records
@@ -29,9 +34,10 @@ export default class TrainingTopicsList extends LightningElement {
     */
 
     //Method 1:Use @wire service and make a call to APEX Method and store output in a property
+    
     @wire(fetchSFTrainingTopics)
     SFTopicslist; // Store OP in a prpoery and bind to HTML
-
+    
 
     //Method 2: Use @wire service and make a call to APEX Method and store output in a function
     @wire(fetchSFTrainingTopics)
@@ -44,6 +50,27 @@ export default class TrainingTopicsList extends LightningElement {
     //Trying to access a method which is not annotated as auraenabled
     @wire(fetchSFTrainingTopicsByCategory, {strCat: 'LWC'})
     SFTopicsByCat;
+
+
+    showAllTrainingTopics()
+    {
+
+        fetchSFTrainingTopics()
+        .then((result) => {this.SFAllTrainingTopics_method3 = result})
+        .catch((error) => {this._error = error})      
+        
+    }
+
+    showAllTrainingTopicsByCat()
+    {
+        // Get the input as entered by the user
+        this._topicCategoryInput =  this.template.querySelector('lightning-input').value;
+
+        // Make a call to APEX method imperatively by passing category input 
+        fetchSFTrainingTopicsByCategory({strCat : this._topicCategoryInput})
+        .then((result) => {this.SFAllTrainingTopics_method3 = result})
+        .catch((error) => this._error = error);
+    }
 
     
 }

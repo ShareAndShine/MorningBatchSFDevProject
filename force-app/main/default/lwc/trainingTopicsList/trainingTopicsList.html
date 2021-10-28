@@ -1,4 +1,6 @@
 <template>
+
+   
     
     <!-- Show user a friendly message if there is no data else show the list of topics-->
     <!-- Hard code array of objects -->
@@ -30,6 +32,32 @@
         <lightning-card  title="Listing all SF training Topics - Using Wire data service (OP in method)" icon-name="standard:asset_action">
             <ul class="slds-var-m-around_medium">
                 <template for:each={SFAllTrainingTopics} for:item="topic">
+                    <li key={topic.ID} class="slds-var-m-around_medium">Topic Name:: {topic.Topic_Name__c} - Topic Category:: {topic.Topic_Category__c}</li>
+                </template>
+                
+              </ul>
+        </lightning-card>
+    </div>
+
+    <!-- Method 3: Using data service and calling APEX method imperatively -->
+       <div if:true={recordExists}>
+        <lightning-card  title="Listing all SF training Topics - Using data service and calling APEX method imperatively" icon-name="standard:asset_action">
+            <lightning-button variant="success" label="Show All Topics" title="Click to see all training topics" onclick={showAllTrainingTopics} class="slds-m-left_x-small"></lightning-button>
+            
+            
+            <div class="slds-m-top_medium slds-m-bottom_x-large">
+                <!-- Default/basic -->
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-input type="text" label="" placeholder=" Enter Topic Category (alteast 3 chars)"></lightning-input>
+                </div>
+                <lightning-button variant="destructive" label="Search Topics By Category " title="Click to search on training topics by category " onclick={showAllTrainingTopicsByCat} class="slds-m-left_x-small"></lightning-button>
+            
+            </div>
+
+
+            
+            <ul class="slds-var-m-around_medium">
+                <template for:each={SFAllTrainingTopics_method3} for:item="topic">
                     <li key={topic.ID} class="slds-var-m-around_medium">Topic Name:: {topic.Topic_Name__c} - Topic Category:: {topic.Topic_Category__c}</li>
                 </template>
                 
