@@ -1,0 +1,27 @@
+<template>
+     <!-- Method 2: Using Wire service and store OP in a method-->
+     <div if:true={recordExists} class="slds-var-m-around_small">
+        <lightning-card  title="Listing all SF training Topics - Using Wire data service (OP in method)" icon-name="standard:asset_action">
+            <ul class="slds-var-m-around_medium">
+                <template for:each={SFAllTrainingTopics} for:item="topic">
+                    <li key={topic.ID} class="slds-var-m-around_medium">Topic Name:: {topic.Topic_Name__c} - Topic Category:: {topic.Topic_Category__c}</li>
+                </template>
+                
+              </ul>
+        </lightning-card>
+    </div>
+
+    <div class="slds-var-m-around_small">
+        <div class="slds-var-p-around_medium lgc-bg">
+            <lightning-input type="text" label="" placeholder=" Enter Topic Name"
+            data-name="inpName"></lightning-input>
+            <lightning-input type="text" label="" placeholder=" Enter Topic Category"
+            data-name="inpCategory"></lightning-input>
+            <lightning-input type="text" label="" placeholder=" Enter Instructor"
+                    data-name="inpInstructor"></lightning-input>
+        </div>
+        <lightning-button variant="success" label="Add Topics  " title="Click to add new training topics " onclick={addTrainingTopic} class="slds-m-left_x-small"></lightning-button>
+    
+
+    </div>
+</template>

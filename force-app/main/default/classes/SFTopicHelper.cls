@@ -15,4 +15,16 @@ public with sharing class SFTopicHelper {
                 Topic_Category__c  like :strCat WITH SECURITY_ENFORCED];
         
     }
+
+    @AuraEnabled
+    public static void InsertSFTopics(string strName, string strCat, string strInstructor) {
+
+        SF_Training_Topic__c newTopic = new SF_Training_Topic__c();
+        newTopic.Topic_Name__c = strName;
+        newTopic.Topic_Category__c = strCat;
+        newTopic.Instructor__c = strInstructor;
+        
+        insert newTopic;        
+        
+    }
 }
