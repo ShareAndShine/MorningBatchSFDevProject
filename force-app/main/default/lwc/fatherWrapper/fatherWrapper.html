@@ -1,0 +1,17 @@
+<template>
+    <lightning-card  title={title} class="slds-var-p-horizontal_small" icon-name="standard:account"> 
+
+        <lightning-card  title="Message from son & daughter" class="slds-var-p-horizontal_small" icon-name="standard:account">
+            <p>Message from John:{johnmessage}</p>
+            <p>Message from Lara:{laramessage}</p>
+        </lightning-card>
+
+        <div class="slds-var-p-horizontal_small">
+            <c-child-component john = {SendMessageToJohn} lara = {SendMessageToLara} ben = {SendMessageToBen} 
+            title="Hi" onsendmessagetofather = {handleMessageReceivedFromChild}></c-child-component>
+          </div>       
+    </lightning-card>
+
+
+    
+</template>

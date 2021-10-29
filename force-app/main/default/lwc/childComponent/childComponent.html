@@ -1,7 +1,35 @@
 <template>
-    <lightning-card  title={title}>
-        
-        <p class="slds-p-horizontal_small">Checking parent to child communication !!!!</p>
-        
+   
+    <lightning-card  title={title} class="slds-var-p-horizontal_small" icon-name="standard:account">        
     </lightning-card>
+
+     <lightning-card  title="John" class="slds-var-p-horizontal_small" icon-name="standard:account">        
+        <p class="slds-var-p-horizontal_small">{john}</p>
+    </lightning-card>
+
+    <lightning-card  title="Lara Croft" class="slds-var-p-horizontal_small" icon-name="standard:lead">        
+        <p class="slds-var-p-horizontal_small">{lara}</p>
+    </lightning-card>
+
+    <lightning-card  title="Ben" class="slds-var-p-horizontal_small" icon-name="standard:contact">        
+        <p class="slds-var-p-horizontal_small">{ben}</p>
+    </lightning-card> 
+
+
+    <div class="slds-var-m-top_medium slds-m-bottom_x-large">
+        <!-- Default/basic -->
+        <div class="slds-var-p-around_medium lgc-bg">
+            <lightning-input type="text" label="" placeholder=" Enter message from John" data-name = "john"></lightning-input>
+        </div>
+
+        <div class="slds-var-p-around_medium lgc-bg">
+            <lightning-input type="text" label="" placeholder=" Enter message from Lara" data-name = "lara"></lightning-input>
+        </div>
+
+
+        <lightning-button variant="success" label="Send message to father !!! " title="Click to send message !!! " onclick={SendMessagetoParent} class="slds-m-left_x-small"></lightning-button>
+    </div>
+
+
+    
 </template>
