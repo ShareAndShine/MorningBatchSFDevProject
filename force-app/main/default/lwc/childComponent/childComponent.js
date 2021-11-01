@@ -8,7 +8,18 @@ export default class ChildComponent extends LightningElement {
         3. In Parent component, add the child component in HTML (use Kebab case)
         4. In Parent component use child property as ATTRIBUTES and share data  
     */
-    
+
+        /*
+           From Child to Parent - Use Events
+            1. In child component, Prepare parameters or data to be passed on to parent 
+            2. In child component, Create a custom event and attach all data to be passed on
+            3. In child component, Dispatch the event  - DONE
+            4. In parent component, receive the event . Use event name in the HTML Attribute and the data that was passed on in JS file
+            5. In parent componet, start using the data as received
+
+        */
+
+     
     @api john ;//= "I am a John. Waiting for a msg from my father!!!!"; 
     
     @api lara ;//= "I am a Lara. Waiting for a msg from my father!!!!"; 
@@ -26,6 +37,7 @@ export default class ChildComponent extends LightningElement {
         //alert("Yet to write logic for sending msg to parent component using events !!! ")
 
         /*
+           
             1. In child component, Read message from inout text boxes - DONE
             2. In child component, Create a custom event and attach all data to be passed on  - DONE
             3. In child component, Dispatch the event  - DONE
@@ -46,7 +58,7 @@ export default class ChildComponent extends LightningElement {
         // Give a name
         // Use detail parameter to send whatever data u wanted to send to parent component
         const sendmessagetofatherevent = new CustomEvent("sendmessagetofather", {
-            detail : { johnmsg : this._johnMessage, laramsg : this._laraMessage }
+            detail : { johnmsg : this._johnMessage, laramsg : this._laraMessage } //event.detail.johnmsg;
         });
 
 

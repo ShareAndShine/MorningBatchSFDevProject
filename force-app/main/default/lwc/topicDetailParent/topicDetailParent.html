@@ -1,0 +1,16 @@
+<template>
+
+    <lightning-card  title="SF training Topics - Detail" icon-name="standard:asset_action">
+            
+        <ul class="slds-var-m-around_medium">
+            <template for:each={_SFTopics} for:item="topic">
+                <li key={topic.ID} class="slds-var-m-around_medium">Topic Name:: {topic.Topic_Name__c} - Topic Category:: {topic.Topic_Category__c}</li>
+            </template>            
+        </ul>
+    
+    </lightning-card>
+
+
+    <!--Adding menu as child component-->
+    <c-menu-child-component onsearchalltopics={handleShowTopicsAllEvent}></c-menu-child-component>
+</template>
