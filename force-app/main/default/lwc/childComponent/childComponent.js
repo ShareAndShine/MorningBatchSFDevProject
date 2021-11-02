@@ -48,8 +48,8 @@ export default class ChildComponent extends LightningElement {
 
 
         // Read inputs
-        this._johnMessage =  this.template.querySelector('lightning-input[data-name="john"').value;
-        this._laraMessage=  this.template.querySelector('lightning-input[data-name="lara"').value;
+        this._johnMessage =  this.template.querySelector('lightning-input[data-name="john"]').value;
+        this._laraMessage=  this.template.querySelector('lightning-input[data-name="lara"]').value;
 
         alert( this._johnMessage);
         alert(this._laraMessage);

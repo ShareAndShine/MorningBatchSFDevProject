@@ -5,7 +5,7 @@ import { CurrentPageReference } from 'lightning/navigation'; // To get current p
 export default class AvengersConsole extends LightningElement {
 
 
-    _msgToSubscribers = "New mission to find Thonas !!!!.. Come to base at once !!!";
+    _msgToSubscribers = "New mission to find Thanos !!!!.. Come to base at once !!!";
 
     // Find the current page using @wire
     @wire(CurrentPageReference) 
@@ -13,8 +13,6 @@ export default class AvengersConsole extends LightningElement {
 
     sendMessagehandler()
     {
-        alert("pageReference from publisher component ::" + JSON.stringify(this.pageReference));
-
         // As a publisher...Fire event to all subscribers
         fireEvent(this.pageReference, 'msgtosubscribers', this._msgToSubscribers);
     }

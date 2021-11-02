@@ -90,8 +90,8 @@
  };
  
  export {
-     registerListener, // Equivalent to receving data in other component
+     registerListener,
      unregisterListener,
      unregisterAllListeners,
-     fireEvent // Equivalent to custom event & dispatch event 
+     fireEvent
  };

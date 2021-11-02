@@ -9,6 +9,8 @@ export default class BlackWidowSubscriber extends LightningElement {
     @wire(CurrentPageReference) 
     pageRef;
 
+    _msgFromAvengerTeam = "Waiting to receive msg from Avenger's console !!!!";
+  
     // Listen to the frequency or msg event from Publisher
     
     connectedCallback()
@@ -16,10 +18,17 @@ export default class BlackWidowSubscriber extends LightningElement {
         // 1st parameter - msgtosubscribers - event that was published by publisher
         // 2nd parameter - As soon as you receive a msg from pub, hand it over to another method to process 
         registerListener('msgtosubscribers', this.processMessage, this);
+        //alert('connected call back');
+
+        //alert("Subscriber component Pageref:" + JSON.stringify(this.pageRef));
     }
 
     processMessage(payload)
     {
-        console.log("Payload as received by subscriber :::" + payload);
+        //console.log("Subscriber component Pageref:" + pageRef);
+        //console.log("Payload as received by subscriber :::" + payload);
+
+        this._msgFromAvengerTeam = payload;
+
     }
 }
