@@ -1,3 +1,8 @@
 import { LightningElement } from 'lwc';
 
-export default class TrainingTopicMenu extends LightningElement {}
+export default class TrainingTopicMenu extends LightningElement {
+
+    
+
+
+}
