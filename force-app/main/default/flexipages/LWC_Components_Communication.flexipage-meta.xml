@@ -6,6 +6,11 @@
                 <componentName>topicDetailParent</componentName>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>captainAmericaSubscriber</componentName>
+            </componentInstance>
+        </itemInstances>
         <name>column1</name>
         <type>Region</type>
     </flexiPageRegions>

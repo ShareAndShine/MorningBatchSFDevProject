@@ -11,8 +11,13 @@
     <label>LWC Snippets</label>
     <navType>Standard</navType>
     <tabs>LWC_Paradise</tabs>
+    <tabs>Navigation_NavigateMixin</tabs>
+    <tabs>LWC_Base_Component_Communication</tabs>
     <tabs>LWC_Components_Communication</tabs>
     <tabs>SF_Training_Topic__c</tabs>
+    <tabs>Lightning_Life_cycle_flow</tabs>
+    <tabs>Vitamin__c</tabs>
+    <tabs>Food__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LWC_Snippets_UtilityBar</utilityBar>
 </CustomApplication>

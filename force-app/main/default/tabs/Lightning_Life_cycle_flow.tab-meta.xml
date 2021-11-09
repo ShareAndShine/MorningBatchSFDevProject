@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created by Lightning App Builder</description>
+    <flexiPage>Lightning_Life_cycle_flow</flexiPage>
+    <label>Lightning Life cycle flow</label>
+    <motif>Custom88: Sailboat</motif>
+</CustomTab>
