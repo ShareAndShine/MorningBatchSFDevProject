@@ -1,0 +1,24 @@
+<template>
+    
+  
+    <!-- Show success or failure message -->
+
+    <lightning-card title="Create Account - Simplified" icon-name="standard-account" class="slds-var-p-around_medium">
+        <div class="slds-var-p-around_medium ">
+              <!-- Once an account is created ensure ID is printed on the screen -->
+            <lightning-input label="Account Id"  value={_accId} disabled></lightning-input> 
+
+            <!-- Need one input text box to get account name -->
+            <lightning-input label = "Account Name" type="text" placeholder="Enter Account Name" data-name="inpAccName">
+            </lightning-input>
+
+            
+            <div class="slds-var-p-around_medium">
+            <lightning-button label = "Create Account" variant = "brand"
+                type="button" onclick={createAccountHandler} class="slds-var-p-around_medium slds-align_absolute-center" >
+            </lightning-button>
+        </div>
+
+        </div>
+    </lightning-card>
+</template>

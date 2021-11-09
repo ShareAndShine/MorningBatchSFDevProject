@@ -1,0 +1,37 @@
+<template>
+
+    <lightning-card title="Navigation hands-on" class="slds-m-horizontal_x-small">
+        <div class="slds-p-around_medium">
+            <lightning-button label="Open lwc online IDE" onclick= {handlewebPage}></lightning-button>
+        </div>
+
+        <!-- Navigate to home Page -->
+        <div class="slds-p-around_medium">
+            <lightning-button label="Open Account page" onclick= {handlAccountHomePage}></lightning-button>
+        </div>
+
+
+         <!-- Navigate to contact create Page -->
+         <div class="slds-p-around_medium">
+            <lightning-button label="Create new contact" onclick= {handlCreateNewContact}></lightning-button>
+        </div>
+
+         <!-- Navigate to single contact page based on unique id (0035g000004snoBAAQ) -->
+         <div class="slds-p-around_medium">
+            <lightning-button label="View contact" onclick= {handleViewContact}></lightning-button>
+        </div>
+
+
+        <!-- Navigate to single contact page based on unique id (0035g000004snoBAAQ) - EDIT mode -->
+        <div class="slds-p-around_medium">
+            <lightning-button label="Edit contact" onclick= {handleEditContact}></lightning-button>
+        </div>
+
+          <!-- Navigate to SF training topics list -->
+        <div class="slds-p-around_medium">
+            <lightning-button label="View all training topics" onclick= {handleViewTrainingTopics}></lightning-button>
+        </div>
+
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,23 @@
+<template>
+    <lightning-card  title="SF training Topics - Base Component demo" icon-name="standard:asset_action">
+        <lightning-button variant="success" label="Show All Topics" title="Click to see all training topics" onclick={showAllTrainingTopics} class="slds-m-left_x-small"></lightning-button>
+       
+        <lightning-button variant="success" label="Create New Topic" title="Click to creaet a training topic" 
+        onclick={creaetTrainingTopic} class="slds-var-m-left_x-small"></lightning-button>
+       
+        <ul class="slds-var-m-around_medium">
+            <template for:each={SFAllTrainingTopics_method3} for:item="topic">
+                <li key={topic.ID} class="slds-var-m-around_medium">
+                    Topic Name:: {topic.Topic_Name__c} - Topic Category:: {topic.Topic_Category__c}
+                    
+                    <a onclick={navigateToAmazon} href="#"><lightning-avatar src="/bad/image/url.jpg" initials="" 
+                    fallback-icon-name="custom:custom92"  class="slds-var-m-around_medium"
+                    alternative-text="Amazon link" onclick={navigateToAmazon}></lightning-avatar>
+                </a>
+
+                </li>
+            </template>
+            
+          </ul>
+    </lightning-card>
+</template>
