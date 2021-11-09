@@ -1,4 +1,4 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 import { createRecord } from 'lightning/uiRecordApi';
 
 import ACCOUNT_OBJ from '@salesforce/schema/Account';
@@ -13,6 +13,8 @@ export default class SimplifiedAccountAddComponent extends LightningElement {
     _accName = "";
 
     _accId ="";
+
+    @api strTitle= "Create Account - Simplified";
     
     createAccountHandler()
     {
