@@ -4,6 +4,15 @@ import { createRecord } from 'lightning/uiRecordApi';
 import ACCOUNT_OBJ from '@salesforce/schema/Account';
 import ACCOUNT_NAME from '@salesforce/schema/Account.Name';
 
+import CON_OBJ from '@salesforce/schema/contact'; // Refer contact object schema
+import TT_OBJ from '@salesforce/schema/SF_Training_Topic__c'; // Refer SF Training Topic object schema
+
+// Refer SF Training Topic object schema and topic category
+import TT_CAT from '@salesforce/schema/SF_Training_Topic__c.Topic_Category__c'; 
+
+
+
+
 // Show Toast event
 import { ShowToastEvent} from 'lightning/platformShowToastEvent';
 
@@ -81,9 +90,26 @@ export default class SimplifiedAccountAddComponent extends LightningElement {
             this.dispatchEvent(failuresevt);
         })
 
+    }
 
-
-
+    keyDownValidationHandler(evt)
+    {
+        // Check key press code for all special character and return false 
+        // to prevent users from entering special character in name field
+        
+        evt = (evt) ? evt : window.event;
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            
+            return false;
+        }
+        else
+        {
+            alert('You cannot enter numbers in account name !!!');
+        
+        }
+        
+        return true;
 
     }
 }

@@ -9,7 +9,7 @@
             <lightning-input label="Account Id"  value={_accId} disabled></lightning-input> 
 
             <!-- Need one input text box to get account name -->
-            <lightning-input label = "Account Name" type="text" placeholder="Enter Account Name" data-name="inpAccName">
+            <lightning-input label = "Account Name" type="text" placeholder="Enter Account Name" data-name="inpAccName" onkeypress={keyDownValidationHandler}>
             </lightning-input>
 
             
