@@ -1,4 +1,4 @@
-// https://www.salesforcetroop.com/news-room-project-using-lwc
+
 
 import { LightningElement } from 'lwc';
 import retriveNews from "@salesforce/apex/newsController.retriveNews";
