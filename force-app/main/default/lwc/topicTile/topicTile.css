@@ -1,0 +1,26 @@
+.lgc-bg {
+    background-color: rgb(117, 134, 117);
+}
+
+.lgc-bg-inverse {
+    background-color: rgb(22, 50, 92);
+}
+
+.tile {
+    padding: 8px;
+    background-color: #af91f5;
+    border-radius: 0.10rem;
+  }
+  .tileselected
+  {
+    padding: 8px;
+    background-color: #0fe90f;
+    border-radius: 0.25rem;
+  }
+  
+  .selected{
+    border-width: medium;
+    border-radius: 4px;
+    border-color: rgb(71, 238, 230);
+    border-style: solid;
+  }

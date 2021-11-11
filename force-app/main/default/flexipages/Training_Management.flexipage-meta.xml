@@ -3,18 +3,13 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>lwcBaseComponentDemo</componentName>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>simplifiedAccountAddEditComponentV1</componentName>
+                <componentName>searchContainner</componentName>
             </componentInstance>
         </itemInstances>
         <name>main</name>
         <type>Region</type>
     </flexiPageRegions>
-    <masterLabel>LWC Base Component Communication</masterLabel>
+    <masterLabel>Training Management</masterLabel>
     <template>
         <name>flexipage:defaultAppHomeTemplate</name>
     </template>

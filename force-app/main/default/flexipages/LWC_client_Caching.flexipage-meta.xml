@@ -3,18 +3,13 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>lwcBaseComponentDemo</componentName>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>simplifiedAccountAddEditComponentV1</componentName>
+                <componentName>cacheBurstDemo</componentName>
             </componentInstance>
         </itemInstances>
         <name>main</name>
         <type>Region</type>
     </flexiPageRegions>
-    <masterLabel>LWC Base Component Communication</masterLabel>
+    <masterLabel>LWC client Caching</masterLabel>
     <template>
         <name>flexipage:defaultAppHomeTemplate</name>
     </template>

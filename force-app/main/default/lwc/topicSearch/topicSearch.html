@@ -1,0 +1,28 @@
+<template>
+
+    <lightning-card title="Search training topics" icon-name="standard:search">
+        <lightning-layout>
+            <lightning-layout-item flexibility="auto" size="12" small-device-size="12" medium-device-size="12"
+                large-device-size="12" padding="around-small">
+                <lightning-input type="text" label="" placeholder=" Enter Topic Category (alteast 3 chars)"
+                    data-name="inputCat"></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout>
+
+            <lightning-layout-item flexibility="auto" size="12" small-device-size="12" medium-device-size="12"
+                large-device-size="12" padding="around-small">
+
+                <div class="slds-align_absolute-center">
+                    <lightning-button variant="success" label="Search Topics By Category "
+                        title="Click to search on training topics by category" onclick={showAllTrainingTopicsByCat}
+                        class="slds-var-p-around_x-small"></lightning-button>
+                    <lightning-button label="New" variant="success" class="slds-var-p-around_x-small"
+                        onclick={createNewTrainingTopic}></lightning-button>
+                </div>
+
+               </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+
+</template>

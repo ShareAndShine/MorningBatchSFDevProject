@@ -1,0 +1,31 @@
+<template>
+
+
+    <!-- <div class="slds-var-p-around_medium lgc-bg">
+        <lightning-tile label={topic.Topic_Category__c} href="#" type="media">
+            <lightning-icon slot="media" icon-name="standard:code_playground" 
+                alternative-text={topic.Topic_Category__c}></lightning-icon>
+            <ul>
+                <li class="slds-item">{topic.Topic_Name__c}</li>
+                <li class="slds-item">{topic.Instructor__r.Name}</li>
+            </ul>
+        </lightning-tile>
+    </div> -->
+
+    <div class="slds-containner slds-border_bottom">
+        <div class="slds-col slds-var-p-around_medium">
+            <div class={isTopicSelected}>
+                <lightning-card class="lgc-bg" onclick={clickHandler}>
+                    <h3 slot="title">
+                        <lightning-icon icon-name="standard:code_playground" size="small"></lightning-icon>
+                        {topic.Topic_Category__c}
+                    </h3>
+                    <div slot="footer">
+                        <lightning-badge label={topic.Instructor__r.Name}></lightning-badge>
+                    </div>
+                    <p class="slds-var-p-horizontal_small"><b>Topic Name:</b> {topic.Topic_Name__c}</p>
+                </lightning-card>
+            </div>
+        </div>
+    </div>
+</template>

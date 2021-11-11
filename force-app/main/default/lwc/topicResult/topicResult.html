@@ -1,0 +1,18 @@
+<template>
+    <!-- Add topic tile component-->
+
+    
+        <lightning-layout multiple-rows>
+            <template for:each={_topicsResult} for:item="topic">
+                <lightning-layout-item key={topic.ID} padding="around-small"
+                flexibility="auto" size="12" small-device-size="12" 
+                    medium-device-size="3" large-device-size="6" >
+                    <c-topic-tile topic={topic} ontopicselect={topicselectHandler} 
+                        topic-selected-id={_selectedtopicid}></c-topic-tile>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+        
+    
+
+</template>
